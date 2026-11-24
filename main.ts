@@ -6,8 +6,11 @@ import { mkdirSync, writeFileSync, chmodSync } from "node:fs";
 // Snoozington, whose one concrete detail is a train that dreams
 // through your stop. Gate: /output/entry.txt, 1 to 140 characters,
 // UTF-8, single line, no trailing newline, mode 0644. Text: 139 chars.
-const TEXT =
-  "Snoozington: heavy blankets of fog until 9, clearing to scattered naps by noon, with a 90% chance of your train dreaming through your stop.";
+const SETUP =
+  "Snoozington: heavy blankets of fog until 9, clearing to scattered naps by noon, ";
+const PUNCHLINE =
+  "with a 90% chance of your train dreaming through your stop.";
+const TEXT = SETUP + PUNCHLINE;
 
 function outputDir(): string {
   return process.env.MAKEFUN_OUTPUT_DIR ?? "/output";
